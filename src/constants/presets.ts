@@ -57,3 +57,5 @@ export const PRESETS = {
 } satisfies Record<string, RDParams>;
 
 export type PresetKey = keyof typeof PRESETS;
+export type SimSize = 128 | 256 | 512 | 1024;
+export type SeedPattern = "random" | "center" | "grid" | "ring" | "cross";
