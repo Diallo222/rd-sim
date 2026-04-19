@@ -4,13 +4,13 @@ varying vec2 v_uv;
 
 uniform sampler2D u_state;
 
-// 3-stop gradient: dark navy → teal → warm white
-// t = 0  →  high B (pattern)   →  dark
-// t = 1  →  high A (background) →  light
+// 3-stop grayscale palette: near-black → mid grey → bright white
+// t = 0  →  high B (pattern)    →  dark
+// t = 1  →  high A (background) →  white
 vec3 palette(float t) {
-  vec3 c0 = vec3(0.02, 0.02, 0.08);  // dark navy
-  vec3 c1 = vec3(0.08, 0.38, 0.48);  // teal
-  vec3 c2 = vec3(1.00, 0.96, 0.88);  // warm white
+  vec3 c0 = vec3(0.04, 0.04, 0.04);  // near-black
+  vec3 c1 = vec3(0.40, 0.40, 0.40);  // mid grey
+  vec3 c2 = vec3(1.00, 1.00, 1.00);  // pure white
 
   return t < 0.5
     ? mix(c0, c1, t * 2.0)
