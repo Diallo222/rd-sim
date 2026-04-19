@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --font-pixel: 'Press Start 2P', monospace;
-  --font-size-2xs: 0.4375rem; /* 7px — right size for Press Start 2P */
+  --font-pixel: 'Space Mono', monospace;
+  --font-size-2xs: 0.6875rem; /* 11px — Space Mono sweet spot */
 }
 
 :root {
   color-scheme: dark;
-  image-rendering: pixelated;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
