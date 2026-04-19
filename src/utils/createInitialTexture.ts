@@ -30,7 +30,7 @@ export function createInitialTexture(size: number): DataTexture {
         const y = ((cy + dy) % size + size) % size;
         const i = (y * size + x) * 4;
         data[i + 0] = 0.5 + (Math.random() - 0.5) * 0.1;
-        data[i + 1] = 0.25 + (Math.random() - 0.5) * 0.1;
+        data[i + 1] = 0.5 + (Math.random() - 0.5) * 0.1;
       }
     }
   }
